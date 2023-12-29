@@ -1,4 +1,4 @@
-# HW README
+# Homework: Speed Comparison Between Vector, List, and Binary Search Tree
 
 Name:
 
@@ -20,5 +20,5 @@ Did you use any external resources (you do not have to cite in class material)? 
 
 (Optional) How would you improve the assignment? 
 
-## Questions Answers (change to better heading)
+
 
