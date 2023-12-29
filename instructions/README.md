@@ -25,7 +25,7 @@ For manually graded elements, we only guarantee time to submit for a regrade **I
 
 
 ## 📚 Resources
-
+ 
 
 ### Linked List Resources
 * [Linked List Visualization]
