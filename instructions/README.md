@@ -57,7 +57,7 @@ You will notice for this assignment, we added a [Makefile](../Makefile). A Makef
 If you view the file, you will see comments on each line for what it does. You can simply type "make" in the same
 directory as the Makefile, and it will follow those rules. You can use `make clean` to remove the executable and object files. This Makefile has targets setup up for each of the applications you will be writing. You can run `make` to compile all of them, or `make <target>` to compile a specific one. For example, `make test-bst` will compile the binary search tree test application.
 
-For windows, you may need to install [make](https://gnuwin32.sourceforge.net/packages/make.htm). However, it is highly recommended make in a linux environment for this assignment, as we have other linux commands we recommend using to make (no pun intended) your life easier. If you are using windows, you can use the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10) to get a linux environment. If you are using a Mac, you already have a linux like environment.
+For windows, you may need to install [make](https://gnuwin32.sourceforge.net/packages/make.htm). However, it is highly recommended using make in a linux environment for this assignment, as we have other linux commands we recommend using to make (no pun intended) your life easier. If you are using windows, you can use the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10) to get a linux environment. If you are using a Mac, you already have a linux like environment.
 
 ---
 
