@@ -22,9 +22,9 @@ Don't forget to use latex math notation (example in the table).
 | Vector | $O(n)$ |  |  |  |  |  |  |  | |
 | Single Linked List |  |  |  |  |  |  |  |  | |
 | Double Linked List |  |  |  |  |  |  |  |  | |
-| Sorted Vector |  |  |  |  |  |  |  |  | |
-| Sorted Single Linked List |  |  |  |  |  |  |  |  | |
-| Sorted Double Linked List |  |  |  |  |  |  |  |  | |
+| Sorted Vector |  |  |  | $O(1)$  | - | - | - | - | - |
+| Sorted Single Linked List |  |  |  | $O(1)$  | - | - | - | - | - |
+| Sorted Double Linked List |  |  |  | $O(1)$  | - | - | - | - | - |
 | Binary Search Tree |  |  |  |  | - | - | - | - | - |
 
 
@@ -32,7 +32,7 @@ Don't forget to use latex math notation (example in the table).
 For Sort, we are asking for the Big $O$ for taking the current data structure and writing it 'sorted' to a file. However, not the file writes. For example, if you have a vector of 1000 elements, and you want to write it to a file, you would need to sort it first. So, the Big $O$ for this would be the Big $O$ for sorting. For BST, you have to convert the tree to a sequential structure, so the cost of doing that.  
 
 ### Assumptions with Sort
-Since the worst case can change considerably based on what sort you use for sorting (if any), list each algorithm below, and specify the algorithm used in your assumption.  For BST, use which  method of traversal you used to sort it.  
+Since the worst case can change considerably based on what sort you use for sorting (if any), list each algorithm below, and specify the algorithm used in your assumption.  For BST, write which  method of traversal you would use to sort it.  
 
 * Vector
 * Single Linked List
@@ -51,9 +51,116 @@ There are a few functions whose worse case is very different than the average ca
 
 ## Empirical Analysis - Speed Comparison
 
+For this section, you will need to have run the speed compare program and generated the output into a CSV file.
+
+### Empirical Results Table
+
+Build a Markdown table off the data generated from your CSV file. if you had a large number of N values, you only need to include up to a max of 20 (for example, the first 10 and last 10). You need to have *at least* 15 different values of N in the table. It will help if you use a convert to convert the CSV to Markdown. You are allowed to use short notation for the function names, such as `AF` for `AddFront`, `AB` for `AddBack`, etc. for readability. 
+
+
+
+### Analysis 
+
+Looking at the data and using a third party program such as excel or sheets, create *at least three* graphics that help explain the data visually. Under each graphic, explain what the graphic is showing, and what you can conclude from it/what you find interesting about it. It is important to make sure you are comparing apples to apples, so comparing Vector Add Front to BST Add doesn't make sense, but comparing SortedVector Add to BST Add does. 
+
+**note** make sure you can see the image embedded in the Report.md using [image markdown] when you upload it to github, and get help if it doesn't show! 
+
+#### Graphic 1 (Replace with a descriptive title)
+
+
+#### Graphic 2 (Replace with a descriptive title)
+
+
+#### Graphic 3 (Replace with a descriptive title)
+
+## Critical Thought
+
+### Data Evaluation
+
+Answer the questions below. Make sure to answer each question fully, and explain your reasoning. Indent your answers immediately below the question, for it to line up with the bullet point.
+
+For example:
+```markdown
+1. What is the most surprising result from the data? Why is it surprising?
+   Answer here
+```
+
+1. What is the most surprising result from the data? Why is it surprising?
+
+2. What data structure is the fast at adding elements (sorted)? Why do you think that is?
+
+3. What data structure is the fastest at removing elements (sorted)? Why do you think that is?
+
+4. What data structure is the fastest at searching? Why do you think that is?
+
+5. What data structure is the fastest for adding elements to the front? Why do you think that is?
+
+6. What data structure is the fastest for adding elements to the back? Why do you think that is?
+
+7. What data structure is the fastest for removing elements from the front? Why do you think that is?
+     
+8. What data structure is the fastest for removing elements from the back? Why do you think that is?
+
+
+
+
+### Deeper Thinking 
+
+#### Double Linked List vs Single Linked List
+1. If you wrote your linked list as a single linked list, removing from the back was expensive. If you wrote it as a double linked list, removing from the back was cheap. Why do you think that is?
+
+2. When running most functions, at least ~30% of the tests were worse case scenarios. Why do you think that is? 
+
+3. What was done in the code to encourage that? 
+
+4. How did this particularly influence the linked list searches?
+
+
+#### Test Bias
+
+1. The tests were inherently biased towards the BST to perform better due the setup of the experiment. Explain why this is the case.  (hint: think about the randomization of the data, and the worst case scenario for BST).
+
+2. What would generate the worst case scenery for a BST?
+
+2. Researching beyond the module, how would one fix a BST so the worst case scenario matches (or at least i closer to) the average case.[^1^]
+
+
+## Scenario 
+
+Fill out the table below. This is a common technical interview topic!
+
+
+| Structure | Good to use when | Bad to use when |
+| ------ | ------ | ------ |
+| Vector |  |  |
+| Linked List | Good for stacks with frequent front only access |  |
+| Sorted Vector | When values coming in are already mostly sorted and we need quick search access. | When space is limited and the dataset is extremely large causing memory to swap. |
+| Sorted Linked List |  |  |
+| BST |  | data is presorted  |
+
+
+## Conclusion
+Summarize your findings. Where there any surprises?  What did you end up learning by comparing speeds?
+
+
+
+
+
+
+
 
 
 ## References
 Add your references here. A good reference includes an inline citation, such as [1] , and then down in your references section, you include the full details of the reference. Computer Science research often uses [IEEE] or [ACM Reference format].
 
 [1] Reference info, date, etc.
+
+
+
+[^1^]: Implementing a BST with a self-balancing algorithm, such as AVL or Red-Black Trees is a great research paper topic!
+
+<!-- links moved to bottom for easier reading in plain text (btw, this a comment that doesn't show in the webpage generated-->
+[image markdown]: https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#images
+
+[ACM Reference Format]: https://www.acm.org/publications/authors/reference-formatting
+[IEEE]: https://www.ieee.org/content/dam/ieee-org/ieee/web/org/conferences/style_references_manual.pdf

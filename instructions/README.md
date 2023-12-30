@@ -68,6 +68,7 @@ After getting the data, you will want to work on your [Report](../Report.md). Al
    * Contains proper BigO table documenting the worse case for each data structure function (as defined in Report)
    * Contains data table of run results with at least 15 different values for N, and a noticeable differences in speeds from lower N to higher N for some of the data structures. 
    * Contains three graphs (minimum) with comments about observations about the run-times. 
+   * Repo includes the .csv file generated from the speed comparison application, along with any other files created (log.txt, additional movie files, etc.)
 4. Exceeds  (MG)
    * Answers questions related to the provided code.
    * Answers questions about the data structures, correctly.
