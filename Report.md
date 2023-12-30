@@ -55,7 +55,9 @@ For this section, you will need to have run the speed compare program and genera
 
 ### Empirical Results Table
 
-Build a Markdown table off the data generated from your CSV file. if you had a large number of N values, you only need to include up to a max of 20 (for example, the first 10 and last 10). You need to have *at least* 15 different values of N in the table. It will help if you use a converter to convert the CSV to Markdown. You are allowed to use short notation for the function names, such as `AF` for `AddFront`, `AB` for `AddBack`, etc. for readability. 
+Add a link from this document to the CSV file you generated. The CSV file must have at least 15 different N values, but
+often can have a lot more depending on what you ran.  
+
 
 
 
