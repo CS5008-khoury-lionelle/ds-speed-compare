@@ -33,6 +33,9 @@ Make sure as you are writing you are *testing* the code. Testing is described in
 
 While the choice is up to you, it is probably easier to finish the three functions in sorted_vector.c, and then work on LinkedList.
 
+### Stretch Goal  
+While completely optional, you may consider implementing a double linked list instead of a single. Just make sure it still passes the tests provided which means make sure the function names do not change. 
+
 
 ## Part 2 (Week 2): Binary Search Tree
 
@@ -46,19 +49,29 @@ After you have completed the code for the data structures, you will need to run 
 > :star: **The Goal: Thinking Critically** :star:  
 > Most data structures have implementations readily available, and you should feel free to use resources (but make sure to list them in your README.md). However, it is important to *understand how they work*, and how to implement them. This assignment is designed to help you think critically about the data structures. Simply, just because you can do something, doesn't mean you should. You will need to think about the tradeoffs of each data structure, and when it is appropriate to use each. 
 
+After getting the data, you will want to work on your [Report](../Report.md). All questions are in the report, need to be answered. The TAs will be grading by looking at your report through a browser, so make sure when it is uploaded to github it looks good (and is formatted correctly).
+
+
+
 
 
 ## 📝 Grading Rubric
 
 
-1. Learning ()
-   * 
-2. Approaching  ()
-   * 
-3. Meets  ()
-   * 
-4. Exceeds  ()
-   * 
+1. Learning (AG)
+   * SortedVector functions properly add, find, and remove elements in sorted order
+2. Approaching  (AG)
+   * LinkedList functions properly add, find, and remove elements
+   * BST functions properly add, find, convert to string, and convert to array.
+3. Meets  (MG)
+   * Implements functions properly included Binary Search for SortedVector and using recursion for depth first searches.
+   * Contains proper BigO table documenting the worse case for each data structure function (as defined in Report)
+   * Contains data table of run results with at least 15 different values for N, and a noticeable differences in speeds from lower N to higher N for some of the data structures. 
+   * Contains three graphs (minimum) with comments about observations about the run-times. 
+4. Exceeds  (MG)
+   * Answers questions related to the provided code.
+   * Answers questions about the data structures, correctly.
+   * Provides answers to deeper thinking questions, related to the data structures and speed comparison.
 
 
 AG - Auto-graded  
