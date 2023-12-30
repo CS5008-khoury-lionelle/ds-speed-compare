@@ -1,8 +1,52 @@
-# HW Instructions
+# Vector, List, and Binary Search Tree Speed Comparison
 
-👉🏽 **Task** 👈🏽
+This is another two week assignment. The first week, you will be more programming focused looking at sequential data structures, while the 
+second week will be adding a new data structure, and comparing the three using a speed comparison application.
 
-:star: **Goal** :star:
+There is a lot of code for this assignment, but most of the assignment code is provided for you. It will be important to go through the code, but then
+take a breath and remind yourself you are only writing code for a small part of the total assignment. 
+
+
+## Provided Code
+
+The code is provided in three directories, each with their own readme. 
+
+* [lib](../lib) - This is the code for the data structures. This is the only directory that requires you to write code. 
+* [tests](../tests) - This is the code to help you test each data structure as you work on writing them. These tests are fairly comprehensive, and will help you debug your code. 
+  They however are not fully exhaustive, so you may need to add more tests or other lines to help debug. You are free to modify these files as you see fit, they will
+  not be graded. However, passing all the tests before you submit to the autograder will help you pass the autograder on the first try. (spoiler many of the tests are the same)
+* [speed_compare_app](../speed_compare_app/) - This is an application that generates empirical data for the speed comparison. You will not need to modify this code, but you will need to run it. This
+   application will be used to generate the data for your report. It is also used an example of yet another way to help look at what you are writing critically and gather data.
+   This is a skill that will be useful in your career, and required for your final research paper. 
+* [Makefile](../Makefile) - This is a file that will help you compile the code. You will not need to modify this file, but you will need to run it. This file is used to automate the
+   compilation of the code. As this code is spread across multiple files, having something like a Makefile will often make the task of compiling easier. 
+* [speed_test_files](../speed_test_files/) - These are the files that are used to generate the data for the speed comparison. You are free to add more files into this directory as you need to compare data. Instructions for doing so using linux commands are in [speed_compare_app/README.md](../speed_compare_app/README.md).
+
+
+## Part 1 (Week 1): Sequential Data Structures - Vector and LinkedList
+
+There are actually four data structures you will be working with. Vector which is another name for an ArrayList (for those familiar with Java), and LinkedList. We also have a "SortedVector" and "SortedLinkedList" which are the same as Vector and LinkedList, but they add the new elements in sorted order, keeping the items sorted in the data structure.
+
+👉🏽 **Task** 👈🏽 - [../lib/linked_list.c](../lib/linked_list.c) and [../lib/sorted_vector.c](../lib/sorted_vector.c) - You will complete the unfinished functions in these files. You will need to read the comments to understand what each function is supposed to do and return. 
+
+Make sure as you are writing you are *testing* the code. Testing is described in the [../tests/README.md](../tests/README.md) file. You will want to make sure you are testing as you go, and not waiting until the end or it will become a nightmare.  For a LinkedList, make sure to refer to the Team Activity in which we provide a similar LinkedList implementation.
+
+While the choice is up to you, it is probably easier to finish the three functions in sorted_vector.c, and then work on LinkedList.
+
+
+## Part 2 (Week 2): Binary Search Tree
+
+After you have completed the Team Activity for binary search trees, you will have strong start to this part of the assignment. You will need to complete the functions in [../lib/bst.c](../lib/bst.c). You will need to read the comments to understand what each function is supposed to do and return. Most of these functions are recursive, so make sure you think simple and only a few lines of code for each. Your Team Activity will help you with this, as you will be writing very similar functions as a team. 
+
+
+## Part 3 (Week 2): Speed Comparison and Report
+
+After you have completed the code for the data structures, you will need to run the speed comparison application. This application will generate data for you to use in your report. You will need to run the application, and then copy the data into your report. Instructions for running the application are in [../speed_compare_app/README.md](../speed_compare_app/README.md). 
+
+> :star: **The Goal: Thinking Critically** :star:  
+> Most data structures have implementations readily available, and you should feel free to use resources (but make sure to list them in your README.md). However, it is important to *understand how they work*, and how to implement them. This assignment is designed to help you think critically about the data structures. Simply, just because you can do something, doesn't mean you should. You will need to think about the tradeoffs of each data structure, and when it is appropriate to use each. 
+
+
 
 ## 📝 Grading Rubric
 
