@@ -32,14 +32,14 @@ Don't forget to use latex math notation (example in the table).
 For Sort, we are asking for the Big $O$ for taking the current data structure and writing it 'sorted' to a file. However, not the file writes. For example, if you have a vector of 1000 elements, and you want to write it to a file, you would need to sort it first. So, the Big $O$ for this would be the Big $O$ for sorting. For BST, you have to convert the tree to a sequential structure, so the cost of doing that.  
 
 ### Assumptions with Sort
-Since the worst case can change considerably based on what sort you use for sorting (if any), list each algorithm below, and specify the algorithm used in your assumption. If the structure is already sorted, just put a dash next to the name. For BST, use which  method of traversal you used to sort it.  
+Since the worst case can change considerably based on what sort you use for sorting (if any), list each algorithm below, and specify the algorithm used in your assumption.  For BST, use which  method of traversal you used to sort it.  
 
 * Vector
 * Single Linked List
 * Double Linked List
-* Sorted Vector
-* Sorted Single Linked List
-* Sorted Double Linked List
+* Sorted Vector - already sorted
+* Sorted Single Linked List - already sorted
+* Sorted Double Linked List - already sorted
 * Binary Search Tree 
 
 ### Worst Case vs. Average Case

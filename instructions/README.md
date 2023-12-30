@@ -122,6 +122,7 @@ For windows, you may need to install [make](https://gnuwin32.sourceforge.net/pac
 [Geek for Geeks: Linked List Data Structure]: https://www.geeksforgeeks.org/data-structures/linked-list/
 [Learn C: Linked List Tutorial]: https://www.learn-c.org/en/Linked_lists
 [Geeks for Geeks: Difference between LinkedList and Vector]: https://www.geeksforgeeks.org/difference-between-vector-and-list/
+[Sorting a Singly Linked List]: https://www.geeksforgeeks.org/sorting-a-linked-list/
 
 [Latex Math]: https://en.wikibooks.org/wiki/LaTeX/Mathematics
 [Tables Generator]: https://www.tablesgenerator.com/markdown_tables
