@@ -73,7 +73,7 @@ After getting the data, you will want to work on your [Report](../Report.md). Al
    * Answers questions related to the provided code.
    * Answers questions about the data structures, correctly.
    * Provides answers to deeper thinking questions, related to the data structures and speed comparison.
-   * Readme.md technical interview and coding practice question answered (and file provided)
+   * Readme.md completed, technical interview, and coding practice question answered (and file provided)
 
 
 AG - Auto-graded  
