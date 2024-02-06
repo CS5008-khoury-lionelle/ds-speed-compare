@@ -6,7 +6,7 @@ VECTOR_FILES = lib/vector.c lib/sorted_vector.c $(MOVIE_FILES)
 BST_FILES = lib/bst.c $(MOVIE_FILES)
 SPEED_COMPARE_FILES = speed_compare_app/speed_compare.c 
 # Detect the OS
-ifeq ($ (OS),Windows_NT)
+ifeq ($(OS),Windows_NT)
 	EXT = .exe
 else
 	EXT = .out
