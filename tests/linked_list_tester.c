@@ -170,7 +170,7 @@ bool test_ll_insert() {
     PRINT_DEBUG("list->size = %d\n", list->size);
     PRINT_DEBUG("list->head->movie->title = %s\n", list->head->movie->title);
     PRINT_DEBUG("list->tail->movie->title = %s\n", list->tail->movie->title);
-    PRINT_DEBUG("list->head->next->next->movie->title = %s\n", list->head->next->next->movie->title);
+    PRINT_DEBUG("list->head->next->movie->title = %s\n", list->head->next->movie->title);
     PRINT_DEBUG("movie3->title = %s\n", movie3->title);
 
 
