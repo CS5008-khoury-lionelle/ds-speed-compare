@@ -1,15 +1,15 @@
 # Speed Compare Application
 
 
-The Speed Compare Application is a program that compares the speed of different data structures. It is designed to be run from the command line, and takes in a few arguments. This application is completed for you. It is just meant to help you generate empirical data for analysis, and to provide an example of another way to generate data for tests. 
+The Speed Compare Application is a program that compares the speed of different data structures. It is designed to be run from the command line, and takes in a few arguments. This application is completed for you. It is just meant to help you generate empirical data for analysis, and to provide an example of another way to generate data for tests.
 
-> STUDENT TODO:  
-> Go through the code making comments helping you better understand the file distribution and how the code works. Ask yourself it there are any unique design aspects that stand out, anything you would have done differently, and anything you would like to know more about. Make sure to ask in the Teams channel if you have questions. 
+> STUDENT TODO:
+> Go through the code making comments helping you better understand the file distribution and how the code works. Ask yourself it there are any unique design aspects that stand out, anything you would have done differently, and anything you would like to know more about. Make sure to ask in the Teams channel if you have questions.
 
 
 ## Operation
 
-Running `make speed-compare` will build the executable. Running `./speed_compare.out` will run the program. It takes in a few arguments. You can always review the arguments by running `./speed-compare.out -h`. 
+Running `make speed-compare` will build the executable. Running `./speed_compare.out` will run the program. It takes in a few arguments. You can always review the arguments by running `./speed-compare.out -h`.
 
 ```
 Usage: ./speed_compare_app [OPTIONS] input_file
@@ -27,42 +27,42 @@ Example Usage:
   ./speed_compare_app -v -o results.csv movie_titles_us_unique.txt
   ```
 
-The above is the help message. It shows the required input file, and the options. The options are all optional, and have default values. 
+The above is the help message. It shows the required input file, and the options. The options are all optional, and have default values.
 
 ### Recommended Usage
 It is first recommended you run the program using a smaller input file. For example,
 
-```bash 
-$ ./speed_compare.out -d -o results_10k.csv -i 500 movie_titles_us_10000.txt
+```bash
+$ ./speed_compare.out -d -o results_10k.csv -i 500 speed_test_files/movie_titles_us_10000.txt
 ```
 
-This will give you an example of what is printed to the console, and what is added to results_10k.csv.  You can open the excel file in VSCode (or any text file), excel, or google sheets. We found it helpful to have the [Rainbow CSV](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv) extension installed in VSCode to help align columns when looking in VSCode. 
+This will give you an example of what is printed to the console, and what is added to results_10k.csv.  You can open the excel file in VSCode (or any text file), excel, or google sheets. We found it helpful to have the [Rainbow CSV](https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv) extension installed in VSCode to help align columns when looking in VSCode.
 
 However, once you are ready to run the full experiment, it is often better to let it run in the background. Running programs in the background are common, and the following explains how to run in the background on linux and macOS. Windows users can use the [Windows Subsystem for Linux](https://docs.microsoft.com/en-us/windows/wsl/install-win10) to run linux commands.
 
 
 ### Running in the background
 
-To run in the background, you can use the `&` symbol. For example, 
+To run in the background, you can use the `&` symbol. For example,
 
 ```bash
-$ ./speed_compare.out -d -o results_100k.csv movie_titles_us_100000.txt &
+$ ./speed_compare.out -d -o results_100k.csv speed_test_files/movie_titles_us_100000.txt &
 ```
 
-However, that will print a lot of information to the screen, which can be really confusing when an application is running in the background. Instead, we would like to redirect the output to a file. To do this, we use the `>` symbol. For example, 
+However, that will print a lot of information to the screen, which can be really confusing when an application is running in the background. Instead, we would like to redirect the output to a file. To do this, we use the `>` symbol. For example,
 
 ```bash
-$ ./speed_compare.out -d -o results_100k.csv movie_titles_us_100000.txt > log.txt &
+$ ./speed_compare.out -d -o results_100k.csv speed_test_files/movie_titles_us_100000.txt > log.txt &
 ```
 
 The log.txt then becomes a searchable file that gets updated as the program runs with anything that would have printed to the console. You should first feel free to try this command with the smaller 10k file to see how it works.
 
 ```bash
-$ ./speed_compare.out -d -o results_10k.csv movie_titles_us_10000.txt > log.txt &
+$ ./speed_compare.out -d -o results_10k.csv speed_test_files/movie_titles_us_10000.txt > log.txt &
 ```
 
-> **WSL/WINDOWS IMPORTANT NOTE**  
-> DO NOT close your terminal while it is running, even if it is running in the background. Depending on how windows is setup, this can kill your background processes as it may close the linux subsystem/shut down the linux OS on windows. Instead, minimize the terminal. Restarting the computer will kill the background processes also. 
+> **WSL/WINDOWS IMPORTANT NOTE**
+> DO NOT close your terminal while it is running, even if it is running in the background. Depending on how windows is setup, this can kill your background processes as it may close the linux subsystem/shut down the linux OS on windows. Instead, minimize the terminal. Restarting the computer will kill the background processes also.
 
 ### Checking progress of the run
 
@@ -100,7 +100,7 @@ If you want to kill the speed_compare application, you can do so by running
 $ kill [PID]
 ```
 
-Where `[PID]` is the process ID. You can get the process ID by running `ps` or `ps -a | grep speed_compare`. The process ID is the first number on the line. For example, 
+Where `[PID]` is the process ID. You can get the process ID by running `ps` or `ps -a | grep speed_compare`. The process ID is the first number on the line. For example,
 
 ```bash
 $ ps -a | grep speed_compare
@@ -116,7 +116,7 @@ $ kill 5012
 Why would I do this? If I managed to put in too large of a file or I think my results file has enough results in it for me to get a good idea of the speed curves. Also good if I write a program that accidentally hangs / has an infinite loop in it. As such, programmers who use the command line often get to know `kill` very well. If kill doesn't work, you can use `kill -9 [PID]` which will force kill the process, however, it is often better to use `kill` first, and then `kill -9` if that doesn't work.
 
 #### tail
-The tail command will help you see the last few lines of a file. This is useful for checking the progress of your program and works well since speed_compare.out saves the file after every line is written, so you can consistently check its progress without interrupting the written file. For example, 
+The tail command will help you see the last few lines of a file. This is useful for checking the progress of your program and works well since speed_compare.out saves the file after every line is written, so you can consistently check its progress without interrupting the written file. For example,
 
 ```bash
 $ tail results_100k.csv
@@ -131,7 +131,7 @@ $ tail log.txt
 Here are example outputs for both.
 
 ```bash
-$ tail solution_results.csv 
+$ tail solution_results.csv
 157000.000000,68.240333,87.508171,0.075335,0.068438,264.005251,0.135747,0.028657,0.036908,0.025300,8.570443,196.373988,0.160037,19.096969,0.007534,0.001210,0.004496,20.858299,0.005015,0.001161,148.397659,0.000961,89.712631
 158000.000000,69.684683,88.936405,0.087649,0.082920,266.916027,0.115461,0.027489,0.035339,0.024558,8.717734,198.413238,0.166560,19.200617,0.007424,0.001209,0.004428,21.084978,0.006240,0.001155,145.573453,0.000889,91.142659
 159000.000000,70.614821,90.038150,0.084871,0.080045,274.169876,0.146459,0.029730,0.037773,0.025838,8.828256,203.098166,0.172856,19.430721,0.006478,0.001185,0.003261,21.313240,0.004524,0.001139,153.097946,0.000795,92.532066
@@ -144,7 +144,7 @@ $ tail solution_results.csv
 166000.000000,88.763036,115.032805,0.102085,0.096797,442.953898,0.204604,0.025920,0.036054,0.029787,9.979916,394.792745,0.245750,22.106283,0.009931,0.001288,0.005429,23.599280,0.006384,0.001289,181.371902,0.000981,158.927898
 ```
 ```bash
-$ tail log.txt 
+$ tail log.txt
 (DEBUG): Removing from list
 (DEBUG): ...result was 177.600384
 (INFO): Finished running tests
@@ -163,28 +163,28 @@ You can also open the files in VSCode or another text editor while the program i
 Of the test files provided in the [speed_test_files](../speed_test_files/) folder, you will see what have 1000, 10000, 100000, and unique movies. The number of unique movies is rather large, as you can tell doing a quick word count.
 
 ```bash
-$ wc -l speed_test_files/movie_titles_us_unique.txt 
+$ wc -l speed_test_files/movie_titles_us_unique.txt
 925175 speed_test_files/movie_titles_us_unique.txt
 ```
-That is 925,175 lines in the file! That is a lot of movies. The original data set had 1,000,000 movies, but we removed duplicates using the `unique` command line program. However, while 100,000 may be useful, you may want to create your own test files. You can do this using the `shuf` command. For example, 
+That is 925,175 lines in the file! That is a lot of movies. The original data set had 1,000,000 movies, but we removed duplicates using the `unique` command line program. However, while 100,000 may be useful, you may want to create your own test files. You can do this using the `shuf` command. For example,
 
 ```bash
 $ shuf -n 50000 speed_test_files/movie_titles_us_unique.txt > speed_test_files/movie_titles_us_50000.txt
 ```
 
-That will randomly shuffle the lines in the file, and then take the first 50,000 lines and save them to a new file. You can then use that file for your own tests. You can also do the same creating maybe 150,000 line file. 
+That will randomly shuffle the lines in the file, and then take the first 50,000 lines and save them to a new file. You can then use that file for your own tests. You can also do the same creating maybe 150,000 line file.
 
-> **What, why so many commands? To the rescue man(ual)!**  
+> **What, why so many commands? To the rescue man(ual)!**
 > In linux/macOS it is the philosophy to have a program that does one thing and does it well. You then have program
 > arguments to add options to that command. There are many tools
-> on the command line for manipulating, reading, and handling text files. These tools are great for helping 
+> on the command line for manipulating, reading, and handling text files. These tools are great for helping
 > with tests, finding information on the computer, and automating tasks. Learning more about the command line
 > and the many tools will often make you a better and more efficient programmer. However, very few people
 > remember all combinations. Instead, they often look up the commands they need. For example, I knew I wanted
 > to a smaller file using the shuf command, I used `man shuf` to learn more about the shuf command, and what
-> options I had. 
+> options I had.
 
-### Summary 
+### Summary
 Using the above commands and some careful thought (and exploration), you should be able to generate a fair number of
 lines in your .CSV file that helps you determine the trend of the algorithms runtime. You can then use this data to
 help answer questions in your report.
